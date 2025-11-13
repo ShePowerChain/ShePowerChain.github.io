@@ -5,7 +5,7 @@ import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
 // Import logo
-import Logo from "@/Images/ShePowerChain_logo_standby.png";
+import Logo from "/assets/ShePowerChain_logo_standby.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
