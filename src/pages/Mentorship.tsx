@@ -15,7 +15,7 @@ const Mentorship = () => {
       students: 68,
       sessions: 242,
       rate: "₹399/hour",
-      avatar: "/assets/mentor1.jpeg",
+      avatar: "src/Images/mentor1.jpeg",
       location: "Jaipur",
     },
     {
@@ -27,7 +27,7 @@ const Mentorship = () => {
       students: 55,
       sessions: 198,
       rate: "₹349/hour",
-      avatar:"/assets/mentor2.jpeg",
+      avatar:"src/Images/mentor2.jpeg",
       location: "Ahmedabad",
     },
     {
@@ -39,7 +39,7 @@ const Mentorship = () => {
       students: 72,
       sessions: 310,
       rate: "₹299/hour",
-      avatar: "/assets/mentor3.jpeg",
+      avatar: "src/Images/mentor3.jpeg",
       location: "Pune",
     },
     {
@@ -51,7 +51,7 @@ const Mentorship = () => {
       students: 44,
       sessions: 156,
       rate: "₹350/hour",
-      avatar: "/assets/mentor4.jpeg",
+      avatar: "src/Images/mentor4.jpeg",
       location: "Lucknow",
     },
     {
@@ -63,7 +63,7 @@ const Mentorship = () => {
       students: 39,
       sessions: 134,
       rate: "₹449/hour",
-      avatar: "/assets/mentor5.jpeg",
+      avatar: "src/Images/mentor5.jpeg",
       location: "Delhi",
     },
   ];

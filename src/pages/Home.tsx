@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Briefcase, Award, Users, TrendingUp, Shield, Zap } from "lucide-react";
 
 const Home = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: Briefcase,
@@ -47,17 +50,12 @@ const Home = () => {
           <div className="max-w-4xl mx-auto text-center space-y-10">
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                Your Career Journey
-              </span>
-              <br />
-              <span className="text-foreground">
-                Starts Here
+                {t('home.title')}
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Find great jobs, show what you're good at, and connect with mentors who believe in you.
-              Everything you need in one simple place.
+              {t('home.subtitle')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6">
@@ -66,16 +64,7 @@ const Home = () => {
                   size="lg"
                   className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-lg px-10 h-16 shadow-lg hover:shadow-xl transition-all rounded-2xl font-semibold"
                 >
-                  Find a Job
-                </Button>
-              </Link>
-              <Link to="/skills" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto text-lg px-10 h-16 border-2 hover:bg-muted rounded-2xl font-semibold"
-                >
-                  Show My Skills
+                  {t('home.cta')}
                 </Button>
               </Link>
             </div>

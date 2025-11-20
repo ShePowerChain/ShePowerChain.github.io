@@ -3,20 +3,23 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSelector from "./LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import logo
-import Logo from "/assets/ShePowerChain_logo_standby.png";
+import Logo from "@/Images/ShePowerChain_logo_standby.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   const navItems = [
-    { name: "Home", path: "/", description: "Main page" },
-    { name: "Find Jobs", path: "/listings", description: "Browse opportunities" },
-    { name: "My Skills", path: "/skills", description: "Verify what you know" },
-    { name: "Get Mentorship", path: "/mentorship", description: "Learn from experts" },
-    { name: "My Profile", path: "/profile", description: "Your information" },
+    { name: t('nav.home'), path: "/", description: "Main page" },
+    { name: t('nav.jobs'), path: "/listings", description: "Browse opportunities" },
+    { name: t('nav.skills'), path: "/skills", description: "Verify what you know" },
+    { name: t('nav.mentorship'), path: "/mentorship", description: "Learn from experts" },
+    { name: t('nav.profile'), path: "/profile", description: "Your information" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -56,11 +59,13 @@ const Navbar = () => {
                 </Button>
               </Link>
             ))}
+            <LanguageSelector />
             <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button & Theme Toggle */}
           <div className="flex items-center gap-2 lg:hidden">
+            <LanguageSelector />
             <ThemeToggle />
             <button
               className="p-2 rounded-xl hover:bg-muted transition-colors"
